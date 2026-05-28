@@ -1,10 +1,16 @@
+"""Desafio 02 - Sistema bancário modularizado em Python.
+
+Esta versão evolui o sistema bancário para incluir cadastro de usuários,
+criação de contas vinculadas e separação de responsabilidades em funções.
+"""
+
 def depositar(saldo, valor, extrato, /):
     if valor <= 0:
         print("Operação falhou! O valor do depósito deve ser positivo.")
         return saldo, extrato
 
     saldo += valor
-    extrato += f"Depósito:	R$ {valor:.2f}\n"
+    extrato += f"Depósito:\tR$ {valor:.2f}\n"
     return saldo, extrato
 
 
@@ -26,13 +32,13 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
         return saldo, extrato, numero_saques
 
     saldo -= valor
-    extrato += f"Saque:	R$ {valor:.2f}\n"
+    extrato += f"Saque:\t\tR$ {valor:.2f}\n"
     numero_saques += 1
     return saldo, extrato, numero_saques
 
 
 def exibir_extrato(saldo, /, *, extrato):
-    print("\n========== EXTRATO ==========")
+    print("\n========== EXTRATO ==========\n")
     if not extrato:
         print("Não foram realizadas movimentações.")
     else:
@@ -97,18 +103,18 @@ def listar_contas(contas):
     for conta in contas:
         usuario = conta["usuario"]
         print("\n------------------------------")
-        print(f"Agência:	{conta['agencia']}")
-        print(f"Conta:		{conta['numero_conta']}")
-        print(f"Titular:	{usuario['nome']}")
-        print(f"CPF:		{usuario['cpf']}")
-        print(f"Nascimento:	{usuario['data_nascimento']}")
-        print(f"Endereço:	{usuario['endereco']}")
+        print(f"Agência:\t{conta['agencia']}")
+        print(f"Conta:\t\t{conta['numero_conta']}")
+        print(f"Titular:\t{usuario['nome']}")
+        print(f"CPF:\t\t{usuario['cpf']}")
+        print(f"Nascimento:\t{usuario['data_nascimento']}")
+        print(f"Endereço:\t{usuario['endereco']}")
     print("------------------------------")
 
 
 def menu():
     return (
-        "\n=== BANCO DIO ===\n"
+        "\n=== BANCO DIO - DESAFIO 02 ===\n"
         "1 - Depositar\n"
         "2 - Sacar\n"
         "3 - Extrato\n"

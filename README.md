@@ -1,33 +1,45 @@
-# Desafio Sistema Bancário
+# Desafio Sistema Bancário em Python
 
-Solução em Python para o desafio "Otimizando o Sistema Bancário com Funções Python" da DIO.
+Este repositório reúne duas versões do desafio bancário da DIO em Python, organizadas para apresentação profissional.
 
-## Arquivo
+## Visão geral
 
-- `desafio_sistema_bancario.py`: implementa o sistema bancário sem orientação a objetos, com funções puras controladas por `main()`.
+- `desafio-01`: versão inicial do sistema bancário com operações básicas de depósito, saque e extrato.
+- `desafio-02`: versão evoluída e modularizada, com cadastro de usuários, criação de contas e melhor organização do código.
 
-## Uso
+## Estrutura do repositório
 
-Execute o script com Python 3:
+- `desafio-01/`
+  - `desafio_bancario_basico.py`
+  - `README.md`
+- `desafio-02/`
+  - `desafio_sistema_bancario.py`
+  - `README.md`
+
+## Como usar
+
+1. Abra o terminal na pasta do projeto.
+2. Entre em `desafio-01` ou `desafio-02`.
+3. Execute o script correspondente:
+
+```bash
+python desafio_bancario_basico.py
+```
+
+ou
 
 ```bash
 python desafio_sistema_bancario.py
 ```
 
-## Funcionalidades
+## Propósito
 
-- Depósito com validação de valor positivo
-- Saque com limite diário de 3 operações e valor máximo de R$ 500
-- Exibição de extrato
-- Criação de usuário com CPF único (apenas números)
-- Criação de conta vinculada a usuário existente
-- Listagem de contas cadastradas
+Este repositório serve como portfólio de um projeto de sistema bancário em Python, mostrando:
 
-## Regras atendidas
+- uma implementação inicial com operações financeiras básicas,
+- a evolução para um código modularizado com funções dedicadas,
+- a aplicação de conceitos de organização e reutilização de código.
 
-- Sem classes, apenas funções
-- `depositar(saldo, valor, extrato, /)` recebe argumentos apenas por posição
-- `sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques)` recebe argumentos apenas por nome
-- `exibir_extrato(saldo, /, *, extrato)` recebe saldo por posição e extrato por nome
-- CPF armazenado apenas com números
-- Conta criada apenas para usuário existente
+## Recomendação
+
+Use os dois desafios para demonstrar a progressão do projeto e a melhoria da estrutura. O `desafio-02` é a versão mais madura e ideal para apresentar no GitHub.
