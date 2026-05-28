@@ -39,7 +39,3 @@ Este repositório serve como portfólio de um projeto de sistema bancário em Py
 - uma implementação inicial com operações financeiras básicas,
 - a evolução para um código modularizado com funções dedicadas,
 - a aplicação de conceitos de organização e reutilização de código.
-
-## Recomendação
-
-Use os dois desafios para demonstrar a progressão do projeto e a melhoria da estrutura. O `desafio-02` é a versão mais madura e ideal para apresentar no GitHub.
